@@ -7,7 +7,6 @@ export default function Splash() {
     const navigation = useNavigation();
 
     useEffect(() => {
-        // Use a timeout to simulate a loading process
         const timer = setTimeout(() => {
             navigation.navigate("Login");
         }, 2000);
@@ -36,8 +35,8 @@ const styles = StyleSheet.create({
         height: '40%',
         aspectRatio: 1,
         borderRadius: 100,
-        marginBottom: 20
-
+        marginBottom: 20,
+        resizeMode:'contain'
     },
     apptitle: {
         fontSize: 40,
