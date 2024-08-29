@@ -1,16 +1,10 @@
 import React, { useState } from 'react'
-import { Alert, Button, Dimensions, Image, Pressable, SafeAreaView, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Alert, Dimensions, Image, Pressable, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 const logo = require("../assets/Applogo.png")
 const github = require("../assets/github.png")
 const linkedin = require("../assets/linkedin.png")
 
-
-// contact me :)
-// instagram: must_ait6
-// email : mustapha.aitigunaoun@gmail.com
-
 export default function LoginScreen() {
-  const [click, setClick] = useState(false);
   const { username, setUsername } = useState("");
   const { password, setPassword } = useState("");
   return (
@@ -39,13 +33,13 @@ export default function LoginScreen() {
       </View>
 
       <View style={styles.mediaIcons}>
-       <TouchableOpacity onPress={() => Alert.alert("Github")}><Image source={github} style={styles.icons} /></TouchableOpacity>
-       <TouchableOpacity onPress={() => Alert.alert("Linkedin")}><Image source={linkedin} style={styles.icons} /></TouchableOpacity>
-        
+        <TouchableOpacity onPress={() => Alert.alert("Github")}><Image source={github} style={styles.icons} /></TouchableOpacity>
+        <TouchableOpacity onPress={() => Alert.alert("Linkedin")}><Image source={linkedin} style={styles.icons} /></TouchableOpacity>
+
       </View>
       <View style={styles.footerview}>
-      <Text style={styles.footerText}>Don't Have Account?</Text>
-      <TouchableOpacity onPress={() => Alert.alert("Sign Successfully!")}><Text style={styles.signup}> Sign Up</Text></TouchableOpacity>
+        <Text style={styles.footerText}>Don't Have Account?</Text>
+        <TouchableOpacity onPress={() => Alert.alert("Sign Successfully!")}><Text style={styles.signup}> Sign Up</Text></TouchableOpacity>
       </View>
     </SafeAreaView>
   )
@@ -54,15 +48,15 @@ export default function LoginScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    height:Dimensions.get("screen").height,
+    height: Dimensions.get("screen").height,
     alignItems: "center",
     paddingTop: 50,
-    backgroundColor:"white"
+    backgroundColor: "white"
   },
   image: {
     height: 170,
     width: 180,
-    borderRadius:90
+    borderRadius: 90
   },
   title: {
     fontSize: 30,
@@ -144,11 +138,11 @@ const styles = StyleSheet.create({
   signup: {
     color: "red",
     fontSize: 14,
-     fontWeight: "650"
+    fontWeight: "650"
   },
-  footerview:{
-    flexDirection:"row",
-    alignItems:"center",
-    justifyContent:"center"
+  footerview: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center"
   }
 })
